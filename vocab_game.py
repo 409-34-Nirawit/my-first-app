@@ -46,7 +46,9 @@ def show_result_dialog(ans1, ans2):
     # ✏️ [พื้นที่สำหรับนักเรียน]: เพิ่มตรวจข้อ 3, 4 ตรงนี้
 
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
-  if score == 2:
+    
+    # แก้ไขย่อหน้า (Indentation) ตรงนี้
+    if score == 2:
         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
@@ -92,6 +94,7 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
         st.session_state.is_ended = True
         st.rerun()
 
+    # นับถอยหลังแบบเรียลไทม์
     time.sleep(1)
     st.rerun()
 
@@ -101,5 +104,3 @@ if st.session_state.get("is_ended", False):
 
 st.divider()
 st.write("นายนิรวิทธ์ สมคำ เลขที่ 34 ม.4/9")
-
-
